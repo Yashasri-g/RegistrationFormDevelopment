@@ -1,0 +1,103 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background-overlay {
+    background-image: url('backpro.jpeg'); /* Ensure this path is correct */
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative; /* Added to position the pseudo-element correctly */
+}
+
+.background-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+    z-index: 0; /* Ensure it is behind the form-container */
+}
+
+.form-container {
+    position: relative;
+    background: rgba(235, 225, 207, 0.5); /* Light orange with increased transparency */
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure it is above the overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group .icon {
+    padding: 10px;
+    background: #ccc;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px; /* Added some margin for better spacing */
+}
+
+button:hover {
+    background: #45a049;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .input-group .icon, .input-group input, button {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+}   
