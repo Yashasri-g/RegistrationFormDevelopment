@@ -26,7 +26,7 @@ For viewing the live demo page [click here](https://yashasri-g.github.io/Registr
 Here’s a sample HTML structure for the registration form:
 you can use this code for creation of a basic registration form with styling in the head section. (used internal css)
 
-```
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
